@@ -283,6 +283,15 @@ section { position: relative; }
 @media (max-width: 860px) { .mythics { grid-template-columns: 1fr; padding: 24px 18px; } }
 @media (max-width: 560px) { .mythic-row { grid-template-columns: repeat(3, 1fr); row-gap: 18px; } }
 
+/* trailer */
+.trailer { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: #000; box-shadow: 0 0 0 1px rgba(255, 79, 216, .25), 0 20px 60px rgba(255, 79, 216, .18); }
+.trailer video, .clip video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+.clips { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+.clip { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
+.clip figcaption { padding: 10px 14px 12px; font-size: .9rem; color: var(--muted); display: grid; gap: 2px; }
+.clip figcaption strong { color: var(--ink); }
+@media (max-width: 600px) { .clips { grid-template-columns: 1fr; } }
+
 /* world */
 .shots { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: 16px; }
 .shot { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--panel); border: 1px solid var(--line); }

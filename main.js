@@ -300,6 +300,14 @@
     });
   }
 
+  // ---------- videos: one plays at a time ----------
+  var videos = $$("video");
+  videos.forEach(function (v) {
+    v.addEventListener("play", function () {
+      videos.forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+    });
+  });
+
   // ---------- reveal on scroll ----------
   var reveals = $$(".reveal");
   if ("IntersectionObserver" in window && !REDUCED) {
