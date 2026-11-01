@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="description" content="An invite to be friends in Glitchlings.">
+<title>Glitchlings Invite</title>
+<!--
+  One-click friends (D95). The invite rides in this page's fragment (#f1...), which the browser never sends to the
+  server; this page sends it nowhere either. It only hands it to the app through the glitchlings: link, and offers
+  the download when the app is not installed. No external scripts, styles or fonts.
+-->
+<style>
+:root {
+  --bg: #f3f1f8;
+  --surface: #ffffff;
+  --ink: #1d1a2e;
+  --muted: #5d5874;
+  --line: #dcd7ea;
+  --cyan: #0a8aa3;
+  --magenta: #b8327a;
+  --chip: #e8e4f4;
+  --shadow: 0 1px 2px rgba(29, 26, 46, .08), 0 8px 24px rgba(29, 26, 46, .08);
+  --display: "Courier New", monospace;
+  --body: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: Consolas, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12101f; --surface: #1b1830; --ink: #ece9f7; --muted: #a8a2c4; --line: #2e2a47;
+    --cyan: #4fd2ea; --magenta: #f27cbd; --chip: #26223e; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12101f; --surface: #1b1830; --ink: #ece9f7; --muted: #a8a2c4; --line: #2e2a47;
+  --cyan: #4fd2ea; --magenta: #f27cbd; --chip: #26223e; --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 620px; margin: 0 auto; padding-inline: 16px; padding-block: 48px 64px; display: grid; gap: 28px; }
+h1 { font-family: var(--display); font-weight: 700; line-height: 1.15; margin: 0; font-size: clamp(2rem, 7vw, 3rem); }
+p { margin: 0; }
+a { color: var(--cyan); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--magenta); outline-offset: 3px; border-radius: 4px; }
+.eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--magenta); }
+.card { background: var(--surface); border-radius: 14px; box-shadow: var(--shadow); padding: 24px; display: grid; gap: 16px; }
+.lede { font-size: 1.15rem; color: var(--muted); }
+.note { font-size: .95rem; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.cta, button { display: inline-block; font-family: var(--display); font-size: 1.05rem; font-weight: 700; border: 0; border-radius: 10px;
+  padding: 12px 20px; cursor: pointer; text-decoration: none; }
+.cta.primary, button.primary { background: var(--cyan); color: var(--bg); }
+.cta.ghost { background: var(--chip); color: var(--ink); }
+.cta:hover, button:hover { filter: brightness(1.08); }
+.bad { color: var(--magenta); }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div>
+    <p class="eyebrow">glitchlings</p>
+    <h1>You're invited</h1>
+  </div>
+  <section class="card" id="good" hidden>
+    <p class="lede">A friend's pet wants to be friends with yours. Your browser may ask whether to open Glitchlings: say yes.</p>
+    <div class="actions">
+      <button type="button" class="primary" id="open">Open Glitchlings</button>
+    </div>
+    <p class="note">No Glitchlings yet?</p>
+    <div class="actions">
+      <a class="cta ghost" href="https://github.com/blazedsensei/glitchlings-releases/releases/latest" rel="noopener noreferrer">Download Glitchlings</a>
+    </div>
+    <p class="note">After installing, click the invite link again.</p>
+  </section>
+  <section class="card" id="broken" hidden>
+    <p class="lede bad">This invite link isn't whole.</p>
+    <p class="note">Ask your friend to copy their invite link again, and click the new one.</p>
+    <div class="actions">
+      <a class="cta ghost" href="https://github.com/blazedsensei/glitchlings-releases/releases/latest" rel="noopener noreferrer">Download Glitchlings</a>
+    </div>
+  </section>
+</main>
+<script>
+(function () {
+  "use strict";
+  // f1 + the pet's relay code + the invite's secret: Crockford base32 (no i, l, o or u), thirty-two characters.
+  var SHAPE = /^f1[0-9a-hjkmnp-tv-z]{32}$/;
+  var raw = String(window.location.hash || "").replace(/^#/, "").trim().toLowerCase();
+  var payload = SHAPE.test(raw) ? raw : "";
+  var good = document.getElementById("good");
+  var broken = document.getElementById("broken");
+  if (!payload) {
+    broken.hidden = false;
+    return;
+  }
+  good.hidden = false;
+  function openApp() {
+    window.location.href = "glitchlings:friend/" + payload;
+  }
+  document.getElementById("open").addEventListener("click", openApp);
+  openApp();
+})();
+</script>
+</body>
+</html>

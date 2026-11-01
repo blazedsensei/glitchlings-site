@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glitchlings: a desktop pet with a mind of its own</title>
+<meta name="description" content="Glitchlings are little creatures that live on your Windows desktop. They hatch from an egg, grow up, remember you, make friends, and step off the desktop into a whole world of their own. Free beta.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0d0820">
+<!-- SITE_URL: the domain lives in these absolute links, robots.txt and sitemap.xml. See website/README.md. -->
+<link rel="canonical" href="https://blazedsensei.github.io/glitchlings-site/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Glitchlings">
+<meta property="og:title" content="Glitchlings: a desktop pet with a mind of its own">
+<meta property="og:description" content="Little creatures that live on your Windows desktop, remember you, and have a whole world to explore. Free beta.">
+<meta property="og:url" content="https://blazedsensei.github.io/glitchlings-site/">
+<meta property="og:image" content="https://blazedsensei.github.io/glitchlings-site/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Glitchlings",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "GameApplication",
+  "description": "Little creatures that live on your Windows desktop. They hatch, grow up, remember you, make friends and explore a whole world.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "blazedsensei" },
+  "image": "https://blazedsensei.github.io/glitchlings-site/img/og.jpg",
+  "url": "https://blazedsensei.github.io/glitchlings-site/"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Glitchlings home">
+      <img class="pixel" src="img/favicon.png" width="36" height="36" alt="">
+      Glitchlings
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#meet">Meet them</a>
+      <a href="#world">The world</a>
+      <a href="#friends">Friends</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="#download">Download</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== hero ===== -->
+  <section class="hero" id="top">
+    <div class="sky" aria-hidden="true"></div>
+    <div class="grid" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow"><span data-version>Version 0.14</span> · free beta · Windows</p>
+        <h1>
+          <span class="logo" data-text="GLITCHLINGS">GLITCHLINGS</span>
+          <span class="tagline">A desktop pet with a mind of its own, and a whole world.</span>
+        </h1>
+        <p class="lede">Glitchlings are little creatures that live on your Windows desktop. They hatch from an egg you keep warm, grow up over real time, remember what you tell them, have good days and bad ones, and now and then step off the desktop to explore a world of their own.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/blazedsensei/glitchlings-releases/releases/latest/download/Glitchlings-beta.zip" data-download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost" href="#hatch">Hatch one here</a>
+        </div>
+        <ul class="hero-facts" aria-label="At a glance">
+          <li>14 species</li>
+          <li>5 mythic legends</li>
+          <li>a whole world</li>
+          <li>free</li>
+        </ul>
+      </div>
+
+      <div class="desk" aria-label="A Glitchling sitting on a desktop, talking">
+        <div class="desk-window" aria-hidden="true">
+          <div class="bar"><span>notes.txt</span><span><i></i><i></i><i></i></span></div>
+          <div class="body">groceries: rice, eggs, tea<br><s>call mum sunday</s><br>interview prep!!<br>fix the bike</div>
+        </div>
+        <div class="desk-perch sprite" aria-hidden="true" data-sprite="frog:idle"></div>
+        <svg class="cursor" viewBox="0 0 18 24" aria-hidden="true"><path d="M1 1l15 12-7 1 4 8-3 1-4-8-5 5z" fill="#fff" stroke="#1a1033" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <p class="bubble" data-bubble aria-live="polite">You crossed out "call mum". Did you call her?</p>
+        <div class="desk-pet sprite" role="img" aria-label="Emberkit, a fox kit with a flaming tail" data-sprite="emberkit:idle"></div>
+        <div class="desk-taskbar" aria-hidden="true"><span></span><span></span><span></span><b>9:41 PM</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== what they do ===== -->
+  <section class="band" id="about">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">What they do</p>
+        <h2>Not a screensaver. Someone who lives there.</h2>
+        <p class="lede">A Glitchling has needs, wants and a mood. It has feelings about things, a personality that changes with how you treat it, and a story of its own life.</p>
+      </div>
+      <div class="features">
+        <article class="feature reveal">
+          <div class="icon"><img class="pixel" src="img/icons/toy_tennis.png" width="32" height="32" alt=""></div>
+          <h3>Lives on your desktop</h3>
+          <p>It wanders, naps, chases your cursor, perches on your windows and gets messy. It has a little house you can step into and furnish.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><img class="pixel" src="img/icons/fx_heart.png" width="32" height="32" alt=""></div>
+          <h3>Talks, and remembers</h3>
+          <p>Chat with it and it remembers what you told it and how you treated it. Its mood steers how it answers. It has bad days, and sometimes it says no.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><img class="pixel" src="img/icons/food_fish.png" width="32" height="32" alt=""></div>
+          <h3>Grows up, for real</h3>
+          <p>From egg to elder over about six months. Feed it, clean it, take it to the vet. It can fall ill, and one day it will die, and you'll remember it.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><img class="pixel" src="img/icons/fx_sparkle.png" width="32" height="32" alt=""></div>
+          <h3>Helps you out</h3>
+          <p>Ask <span class="say">find my resume</span>, <span class="say">let's play Hades</span> or <span class="say">is my disk full?</span>. It asks before opening anything new, and file names never leave your PC.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><img class="pixel" src="img/icons/care_brush.png" width="32" height="32" alt=""></div>
+          <h3>Makes you things</h3>
+          <p>Now and then it paints you a picture of its day, in a style of its own, from crayon to comic panel, and leaves it in its house.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><img class="pixel" src="img/icons/train_strike.png" width="32" height="32" alt=""></div>
+          <h3>Trains and battles</h3>
+          <p>Training games teach it new moves, and every move has its own animation. Moves get stronger the more it uses them.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== hatch ===== -->
+  <section class="band alt" id="hatch">
+    <div class="wrap hatch">
+      <div>
+        <button class="nest" type="button" data-nest aria-describedby="hatch-hint">
+          <span class="sprite still" data-egg></span>
+          <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Warm the egg</span>
+        </button>
+        <div class="warmth" aria-hidden="true"><i></i></div>
+        <p class="hint" id="hatch-hint" data-hint>Press and hold the egg to keep it warm</p>
+      </div>
+      <div class="hatch-copy reveal">
+        <p class="eyebrow">Every pet starts as an egg</p>
+        <h2>Keep it warm.</h2>
+        <p class="lede">In the app you hold your cursor near the egg, or press and hold on it. After a couple of minutes of company it hatches, and its first words are about the warmth it felt. Here it only takes a moment.</p>
+        <div class="hatch-result" data-result aria-live="polite">
+          <span class="name">Who's in there?</span>
+          <p>Its personality and strengths are rolled when it hatches. No re-rolls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== species ===== -->
+  <section class="band" id="meet">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">Meet them</p>
+        <h2>Fourteen species to hatch</h2>
+        <p class="lede">Each has its own voice, quirks, favourite food and opinions about baths. Pick one to learn more.</p>
+      </div>
+      <div class="species" data-species></div>
+
+      <div class="mythics reveal">
+        <div>
+          <p class="eyebrow">Never from an egg</p>
+          <h3>Five Mythic Glitchlings</h3>
+          <p>They live only out in the world and roam the far lands on the real calendar. Hear the rumours first, then go looking.</p>
+        </div>
+        <div class="mythic-row" data-mythics></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== world ===== -->
+  <section class="band alt" id="world">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Built in</p>
+        <h2>A whole world beyond the desktop</h2>
+        <p class="lede">Any time it feels like it, your pet can step off the desktop into the Glimmerwild, an endless painted world, and come back tired with a story. The pets on your desktop are the ones who go out, and everything they meet there stays part of their lives.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot big reveal">
+          <img src="img/shots/seamside.jpg" width="1100" height="660" loading="lazy" alt="A small village of grassy-roofed cottages with lanterns, a well, a market stall and pets walking the paths.">
+          <figcaption>Seamside, the hamlet by the door into the world.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <img src="img/shots/stray.jpg" width="1100" height="688" loading="lazy" alt="A fox-like pet meeting a small blue stray in a forest, with choices to sit nearby, play, listen or leave it be.">
+          <figcaption>Meeting a stray. Trust takes a few visits.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <img src="img/shots/map.jpg" width="1100" height="688" loading="lazy" alt="A painted map of explored land surrounded by unexplored static, with icons for home, villages, camps and a legend sighting.">
+          <figcaption>The map fills in as you explore. The rest is still static.</figcaption>
+        </figure>
+      </div>
+      <ul class="world-list">
+        <li>Walled towns with an inn, a shop, a market, festivals and six gyms to beat.</li>
+        <li>Villages whose residents remember you, trade with you and pass on gossip.</li>
+        <li>Wild Glitchlings living their own lives. Win one over and it may come home with you.</li>
+        <li>Strays with broken memories of a past home, told a piece at a time.</li>
+        <li>Hidden hollows, lantern puzzles, treasure maps, fishing, races and hide-and-seek.</li>
+        <li>Its own weather and real seasons, and training grounds to learn new moves.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== home ===== -->
+  <section class="band" id="home">
+    <div class="wrap home">
+      <div class="reveal">
+        <p class="eyebrow">A place of its own</p>
+        <h2>Every pet has a house</h2>
+        <p class="lede" style="margin-top:14px">Step inside to feed, bathe and play. Furnish it, pick the wallpaper, floor and rugs, and watch it change with the seasons. At night the lamps come on.</p>
+        <ul class="ticks">
+          <li><img class="pixel" src="img/icons/toy_gem.png" width="24" height="24" alt=""><span><strong>Loose toys bounce.</strong> Your pet chases them, fetches them and sniffs what you drop.</span></li>
+          <li><img class="pixel" src="img/icons/food_berry.png" width="24" height="24" alt=""><span><strong>Drop things on it.</strong> Files, pictures and gifts all get a reaction.</span></li>
+          <li><img class="pixel" src="img/icons/fx_zzz.png" width="24" height="24" alt=""><span><strong>It keeps its keepsakes.</strong> Drawings, festival charms and whatever it brought back from the world.</span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="room-frame" data-room>
+          <img class="day" src="img/rooms/cozy.webp" width="640" height="400" alt="A cozy room in a pet's house, in daylight.">
+          <img class="night" src="img/rooms/cozy_night.webp" width="640" height="400" alt="" aria-hidden="true">
+        </div>
+        <div class="room-controls" role="group" aria-label="Pick a room">
+          <button class="chip" type="button" data-room-pick="cozy" aria-pressed="true">Cozy</button>
+          <button class="chip" type="button" data-room-pick="garden" aria-pressed="false">Garden</button>
+          <button class="chip" type="button" data-room-pick="crystal_cave" aria-pressed="false">Crystal cave</button>
+          <button class="chip" type="button" data-room-pick="beach" aria-pressed="false">Beach</button>
+          <button class="chip" type="button" data-room-pick="library" aria-pressed="false">Library</button>
+          <button class="chip" type="button" data-room-pick="ember_forge" aria-pressed="false">Ember forge</button>
+          <button class="chip toggle" type="button" data-night aria-pressed="false">Night</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== friends ===== -->
+  <section class="band alt" id="friends">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">Better together</p>
+        <h2>Pets make friends, too</h2>
+        <p class="lede">Up to three pets can share your desktop, taking turns to chat and growing closer pair by pair. And your pet can befriend a friend's pet anywhere in the world.</p>
+      </div>
+      <div class="friends">
+        <article class="friend-card reveal">
+          <div class="duo" aria-hidden="true"><div class="sprite" data-sprite="mossbun:idle"></div><div class="sprite flip" data-sprite="chillpip:idle"></div></div>
+          <h3>One-click invites</h3>
+          <p>Right-click your pet, choose <em>invite a friend</em>, and send the link. When your friend clicks it, your pets are friends. No codes, no addresses.</p>
+        </article>
+        <article class="friend-card reveal">
+          <div class="duo" aria-hidden="true"><div class="sprite" data-sprite="capybara:happy_idle"></div><div class="sprite flip" data-sprite="lumoth:idle"></div></div>
+          <h3>Visits and sleepovers</h3>
+          <p>They visit each other, nap side by side, play ball and peek into each other's houses. Invite a friend to a live hangout and both pets show up on both desktops.</p>
+        </article>
+        <article class="friend-card reveal">
+          <div class="duo" aria-hidden="true"><div class="sprite" data-sprite="emberkit:happy_idle"></div><div class="sprite flip" data-sprite="duskit:idle"></div></div>
+          <h3>Battle a friend</h3>
+          <p>The <em>fight</em> button beside a friend starts a live battle, with every move animated and elemental marks left on your desktop.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== privacy ===== -->
+  <section class="band" id="privacy">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Privacy</p>
+        <h2>It lives on your PC, not ours</h2>
+        <p class="lede">There's no account to make. Your pets, and everything they learn about you, are saved on your own computer.</p>
+      </div>
+      <div class="privacy">
+        <div class="priv reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <div><h3>Every sense is off until you say yes</h3><p>Noticing which app you're in (by name only), your calendar, your music: each has its own switch. It never sees your screen.</p></div>
+        </div>
+        <div class="priv reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+          <div><h3>Your chats, your key</h3><p>Only what you say in chat goes to Google's Gemini, under a free key of your own. Without a key your pet still remembers everything and talks in sounds and body language.</p></div>
+        </div>
+        <div class="priv reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+          <div><h3>Signed updates, asked first</h3><p>It checks for a new version about once a day and asks before installing. Every update is signed, so a fake one is refused.</p></div>
+        </div>
+        <div class="priv reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+          <div><h3>Friends without addresses</h3><p>Friend features go through the always-on friends' server. Nobody's internet address is shown to anyone.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== download ===== -->
+  <section class="band download" id="download">
+    <div class="sky" aria-hidden="true"></div>
+    <div class="grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="dl-card reveal">
+        <p class="eyebrow"><span data-version>Version 0.14</span> · free beta</p>
+        <h2>Bring one home</h2>
+        <p class="lede">It's a beta, so expect a few bugs. You'll be one of the first people to have one.</p>
+        <a class="btn btn-primary" href="https://github.com/blazedsensei/glitchlings-releases/releases/latest/download/Glitchlings-beta.zip" data-download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+          Download Glitchlings
+        </a>
+        <p class="btn-note"><span data-size>Glitchlings-beta.zip, about 500 MB</span> · <a href="https://github.com/blazedsensei/glitchlings-releases/releases/latest">all release notes</a></p>
+      </div>
+      <ol class="steps">
+        <li><div><p><strong>Unzip it</strong> somewhere you'll keep it, like your Documents folder. Keep everything in the folder together.</p></div></li>
+        <li><div><p><strong>Double-click <span class="say">Glitchlings.exe</span>.</strong> Windows may say it protected your PC, because the app isn't signed yet. Click <em>More info</em>, then <em>Run anyway</em>.</p></div></li>
+        <li><div><p><strong>Give it a voice</strong>, or skip it. Paste a free Gemini key from <a href="https://aistudio.google.com/apikey" rel="noopener">Google AI Studio</a> on the first-run page or in Settings.</p></div></li>
+        <li><div><p><strong>Pick a species and a name, and warm the egg.</strong> Right-click your pet any time for its menu, or press <span class="say">Ctrl+Alt+G</span>.</p></div></li>
+      </ol>
+      <p class="reqs"><span><b>Needs</b> Windows 10 or 11, 64-bit</span><span><b>Space</b> about 600 MB</span><span><b>Price</b> free</span></p>
+    </div>
+  </section>
+
+  <!-- ===== faq ===== -->
+  <section class="band alt" id="faq">
+    <div class="wrap">
+      <div class="head center reveal">
+        <p class="eyebrow">Questions</p>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is it really free?</summary>
+          <div class="a"><p>Yes. Glitchlings is a free beta. The only thing that could ever cost money is the Gemini key for chat, and Google's free tier covers normal chatting.</p></div>
+        </details>
+        <details>
+          <summary>Why does Windows warn me when I open it?</summary>
+          <div class="a"><p>The app isn't code-signed yet, so Windows SmartScreen doesn't recognise it. Click <em>More info</em>, then <em>Run anyway</em>. Don't use "Run as administrator"; it doesn't need it.</p></div>
+        </details>
+        <details>
+          <summary>Does it need the internet, or a Gemini key?</summary>
+          <div class="a"><p>Neither, to live. Without a key your pet still eats, sleeps, plays, remembers and explores, and talks in sounds and body language. With a free key it chats in words. Friend features need the internet.</p></div>
+        </details>
+        <details>
+          <summary>Can it see my screen?</summary>
+          <div class="a"><p>No. If you switch it on, it notices which app you're in by name only, and talks about it. Every sense starts off and has its own switch.</p></div>
+        </details>
+        <details>
+          <summary>Do they really die?</summary>
+          <div class="a"><p>Yes. A Glitchling grows old over about six months, can fall ill and needs looking after. When it dies it gets a memorial, and you can start again with a new egg. You're told all this before you hatch one.</p></div>
+        </details>
+        <details>
+          <summary>Can I have more than one?</summary>
+          <div class="a"><p>Yes. Up to three can be out on your desktop at once. They take turns to chat and form friendships of their own, pair by pair. A wild Glitchling that trusts your pet may follow it home and join the family, too.</p></div>
+        </details>
+        <details>
+          <summary>Where are my pets saved? What about updates?</summary>
+          <div class="a"><p>In <code>%LOCALAPPDATA%\Glitchlings</code>, not in the app's folder, so updating, moving or deleting the app never touches them. The app checks for updates about once a day, asks first, and refuses anything that isn't signed.</p></div>
+        </details>
+        <details>
+          <summary>Mac? Linux? Phone?</summary>
+          <div class="a"><p>Windows 10 and 11 only, for now.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="parade" data-parade aria-hidden="true"></div>
+  <div class="wrap">
+    <p>Glitchlings™ is made by blazedsensei. Be nice to them.</p>
+    <nav aria-label="Footer">
+      <a href="#download">Download</a>
+      <a href="https://github.com/blazedsensei/glitchlings-releases/releases" rel="noopener">Releases</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="sprites.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
