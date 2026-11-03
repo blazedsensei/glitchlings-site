@@ -319,20 +319,18 @@
     reveals.forEach(function (r) { r.classList.add("in"); });
   }
 
-  // ---------- the newest release: version, size, download link ----------
+  // ---------- the newest release: size and download link ----------
   if (window.fetch && location.protocol !== "file:") {
     fetch("https://api.github.com/repos/" + RELEASES + "/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (rel) {
         if (!rel || !rel.tag_name) return;
-        var v = String(rel.tag_name).replace(/^v/i, "");
-        $$("[data-version]").forEach(function (n) { n.textContent = "Version " + v; });
         var zip = (rel.assets || []).filter(function (a) { return /\.zip$/i.test(a.name); })[0];
         if (!zip) return;
         $$("[data-download]").forEach(function (a) { a.href = zip.browser_download_url; });
         var mb = Math.round(zip.size / 1048576 / 10) * 10;
         $$("[data-size]").forEach(function (n) { n.textContent = zip.name + ", about " + mb + " MB"; });
       })
-      .catch(function () { /* the page already says 0.14 */ });
+      .catch(function () { /* the button already links to the latest zip */ });
   }
 })();
