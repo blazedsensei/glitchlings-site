@@ -300,6 +300,23 @@
     });
   }
 
+  // ---------- community links ----------
+  // Fill these in once the accounts exist (docs/COMMUNITY_SETUP.md). Until then a button that needs one shows
+  // "soon" and does nothing, and a plain link stays on the community page.
+  var LINKS = {
+    discord: "https://discord.gg/6uNnCRtFYa",  // a never-expiring invite
+    kofi: "https://ko-fi.com/blazedsensei",
+    sponsors: ""  // https://github.com/sponsors/blazedsensei, once GitHub approves the profile
+  };
+  $$("[data-link]").forEach(function (a) {
+    var url = LINKS[a.getAttribute("data-link")];
+    if (url) { a.href = url; a.rel = "noopener"; return; }
+    if (!a.classList.contains("btn")) return;
+    a.removeAttribute("href");
+    a.setAttribute("aria-disabled", "true");
+    a.classList.add("soon");
+  });
+
   // ---------- videos: one plays at a time ----------
   var videos = $$("video");
   videos.forEach(function (v) {
